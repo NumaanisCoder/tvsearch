@@ -1,0 +1,74 @@
+form{
+    text-align: center;
+}
+#ti{
+    text-align: center;
+    color: white;
+    background-color: black;
+    padding: 10px;
+}
+input{
+    font-size: medium;
+    padding: 10px;
+    border-radius: 10px;
+}
+button{
+    background-color: rgba(255, 255, 255, 0.207);
+    color: white;
+    border-style: outset;
+    border-radius: 20px;
+    padding: 10px;
+    font-size: medium;
+    cursor: pointer;
+
+}
+button:hover{
+    opacity: .75;
+}
+
+#x{
+    font-weight: 600;
+}
+#photo{
+    display: block;
+    margin: auto;
+}
+body{
+    background-color: black;
+    color: white;
+    min-height: 100vh;
+}
+
+#reld{
+    margin-left: 10px;
+    color: rgb(208, 252, 76);
+    font-weight: 600;
+    font-size: large;
+}
+#rating{
+    margin-left: 10px;
+    color: rgb(11, 165, 231);
+    font-weight: 600;
+    font-size: large;
+}
+#endd{
+    margin-left: 10px;
+    color: rgb(247, 87, 87);
+    font-weight: 600;
+    font-size: large;
+}
+#detail{
+    margin: 10px;
+    line-height: 26px;
+    font-weight: 500;
+}
+#footer{
+   position: sticky;
+   top: 100%;
+   text-align: center;
+}
+#heading{
+    text-align: center;
+    padding-top: 30px;
+}
+
