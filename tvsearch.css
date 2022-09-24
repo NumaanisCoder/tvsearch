@@ -3,7 +3,7 @@ form{
 }
 #ti{
     text-align: center;
-    color: brown;
+    color: white;
     background-color: black;
     padding: 10px;
 }
@@ -13,10 +13,9 @@ input{
     border-radius: 10px;
 }
 button{
-    background-color: rgba(255, 255, 255, 0.207);
+    background-color: black;
     color: white;
-    border-style: outset;
-    border-radius: 20px;
+    border-radius: 30px;
     padding: 10px;
     font-size: medium;
     cursor: pointer;
@@ -46,6 +45,12 @@ body{
     font-size: large;
 }
 #rating{
+    margin-left: 10px;
+    color: rgb(11, 165, 231);
+    font-weight: 600;
+    font-size: large;
+}
+#platform{
     margin-left: 10px;
     color: rgb(11, 165, 231);
     font-weight: 600;

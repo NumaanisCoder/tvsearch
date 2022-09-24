@@ -2,7 +2,7 @@ const form = document.querySelector('form');
 form.addEventListener('submit',function(e){
     e.preventDefault();
     console.log("Submited")
-    const user =  form.elements.query.value;
+    const user =  document.querySelector('#inpu').value;
     fetch(`https://api.tvmaze.com/search/shows?q=${user}`)
     .then((res)=>{
         res.json()
@@ -11,6 +11,7 @@ form.addEventListener('submit',function(e){
             heading.innerText = response[0].show.name;
             const image = document.querySelector('#photo');
             image.src = response[0].show.image.medium;
+            image.alt = "IMAGE NOT AVAILABLE";
             const rating = document.querySelector('#rating');
             rating.innerText = "Rating: "+response[0].show.rating.average;
             const rel = document.querySelector('#reld');
@@ -21,6 +22,8 @@ form.addEventListener('submit',function(e){
             }else{
                 endd.innerText = "Last episode date: " +response[0].show.ended;
             }
+            const platform = document.querySelector('#platform');
+            platform.innerText = "Available On: "+response[0].show.network.name;
             const para = document.querySelector('#detail');
             para.innerHTML = response[0].show.summary;
             console.log(response)
@@ -28,7 +31,7 @@ form.addEventListener('submit',function(e){
         })
         .catch((e)=>{
             const heading = document.querySelector('#heading');
-            heading.innerText = "Please inter valid show name";
+            heading.innerText = "Please enter valid show name";
             document.getElementById("info").style.display = "none";
         })
     })
