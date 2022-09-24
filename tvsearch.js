@@ -31,11 +31,7 @@ form.addEventListener('submit',function(e){
         })
         .catch((e)=>{
             const heading = document.querySelector('#heading');
-<<<<<<< HEAD
-            heading.innerText = "Please enter valid show name";
-=======
             heading.innerText = "Please Enter valid show name";
->>>>>>> 17d8b034ed22ee499b41068e8d48ada8d45b5c64
             document.getElementById("info").style.display = "none";
         })
     })
