@@ -2,6 +2,8 @@ const form = document.querySelector("form");
 form.addEventListener("submit", function (e) {
   e.preventDefault();
   console.log("Submited");
+  const suggest = document.querySelector('#suggest');
+  suggest.style.display = 'none';
   const user = document.querySelector("#inpu").value;
   const selectValue = document.querySelector("#select").value;
 
@@ -45,7 +47,6 @@ form.addEventListener("submit", function (e) {
       res
         .json()
         .then((response) => {
-          const heading = document.querySelector("#heading");
           heading.innerText = response[0].show.name;
           const image = document.querySelector("#photo");
           image.src = response[0].show.image.medium;
@@ -75,8 +76,14 @@ form.addEventListener("submit", function (e) {
   }
 });
 
+
 function suggest() {
+  const suggest = document.querySelector('#suggest');
+  suggest.style.display = 'block';
   const user = document.querySelector("#inpu").value;
+  if(user == ''){
+    suggest.style.display = 'none';
+  }
   if (user) {
     fetch(
       `https://api.themoviedb.org/3/search/movie?api_key=e34c3d0e727fb20bb91fe0db121f6b30&language=en-US&query=${user}&page=1&include_adult=false`
@@ -92,13 +99,7 @@ function suggest() {
       
           suggest1.innerText = list[0].title
           suggest2.innerText = list[1].title
-          suggest3.innerText = list[2].title
-
-          setTimeout(()=>{
-            const suggest = document.querySelector('#suggest');
-            suggest.style.display = 'none';
-          },4000)
-        
+          suggest3.innerText = list[2].title  
       })
       .catch((err)=>{
         console.log(err);
