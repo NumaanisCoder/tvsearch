@@ -19,6 +19,10 @@ form.addEventListener('submit',function(e){
                 image.style.width = "210px";
                 const path = "https://image.tmdb.org/t/p/original/"+data.results[0].poster_path;
                 image.src = path;
+                const rel = document.querySelector('#reld');
+                rel.innerText = null;
+                const platform = document.querySelector('#platform');
+                platform.innerText = null;
                 const rating = document.querySelector('#rating');
                 rating.innerText = "Rating: "+data.results[0].vote_average;
                 const endd = document.querySelector('#endd');
