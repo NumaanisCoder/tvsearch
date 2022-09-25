@@ -11,12 +11,18 @@
     <h1 id="ti">TV Search App</h1>
     <hr>
     <form>
-        <input id="inpu" name="query" type="text" placeholder="Search Movie/show..">
+        <input oninput="suggest()" id="inpu" name="query" type="text" placeholder="Search Movie/show..">
         <select name="" id="select">
             <option value="Mov">Movies</option>
             <option value="Web">Web Series</option>
         </select>
         <button>Search</button>
+        <div id="suggest">
+            <p id="suggest1"></p>
+            <p id="suggest2"></p>
+            <p id="suggest3"></p>
+        </div>
+        
     </form>
     <h1 id="heading"></h1>
     <div id="info">
