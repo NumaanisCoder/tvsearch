@@ -13,7 +13,7 @@ input{
     font-size: medium;
     padding: 10px;
     border-radius: 10px;
-    width: 150px;
+    width: 40%;
 }
 button{
     float: left;
@@ -24,6 +24,7 @@ button{
     margin-left: 4px;
     font-size: medium;
     cursor: pointer;
+    width: 20%;
 
 }
 button:hover{
@@ -80,17 +81,20 @@ body{
 }
 #heading{
     text-align: center;
+    margin-top: 20px;
     padding-top: 30px;
 }
 select{
     float: left;
+    border-radius: 20px;
     margin-left: 3px;
     padding: 10px;
-    width:110px;
+    width:25%;
 }
 #suggest{
     display: none;
     float: left;
+    width: 60%;
     padding: 6px;
     margin-left: 10px;
     min-width: 150px;

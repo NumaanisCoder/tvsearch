@@ -95,14 +95,16 @@ function suggest() {
         const suggest3 = document.querySelector('#suggest3');
 
         const suggest = document.querySelector('#suggest');
-        suggest.style.display = 'block';
+        suggest.style.display = 'inline';
       
           suggest1.innerText = list[0].title
           suggest2.innerText = list[1].title
-          suggest3.innerText = list[2].title  
+          suggest3.innerText = list[2].title 
+
+          console.log(list)
       })
       .catch((err)=>{
-        console.log(err);
+        
       })
     );
   } else {
