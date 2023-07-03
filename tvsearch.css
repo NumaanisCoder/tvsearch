@@ -103,4 +103,22 @@ select{
     border-radius: 20px;
 }
 
+#download{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    text-align: center;
+    margin: auto;
+    margin-top: 20px;
+}
+.downloadbtn{
+    border: 1px solid white;
+    width: 200px;
+    text-align: center;
+    margin: auto;
+    background-color: transparent;
+    padding: 6px;
+    border-radius: 10px;
+}
 

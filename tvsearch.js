@@ -1,4 +1,7 @@
 const form = document.querySelector("form");
+const downloadLink = document.querySelector(".downloadbtn");
+const downDiv = document.querySelector("#download");
+
 form.addEventListener("submit", function (e) {
   e.preventDefault();
   console.log("Submited");
@@ -24,6 +27,8 @@ form.addEventListener("submit", function (e) {
               "https://image.tmdb.org/t/p/original/" +
               data.results[0].poster_path;
             image.src = path;
+            downloadLink.href = path;
+            downDiv.style.display = "block";
             const rel = document.querySelector("#reld");
             rel.innerText = null;
             const platform = document.querySelector("#platform");
