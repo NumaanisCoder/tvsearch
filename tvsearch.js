@@ -4,9 +4,6 @@ const downDiv = document.querySelector("#download");
 
 form.addEventListener("submit", function (e) {
   e.preventDefault();
-  console.log("Submited");
-  const suggest = document.querySelector('#suggest');
-  suggest.style.display = 'none';
   const user = document.querySelector("#inpu").value;
   const selectValue = document.querySelector("#select").value;
 
